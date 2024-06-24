@@ -1023,7 +1023,7 @@ func (c *TestWriteClient) expectExemplars(ss []record.RefExemplar, series []reco
 	for _, s := range ss {
 		tsID := getSeriesIDFromRef(series[s.Ref])
 		e := prompb.Exemplar{
-			Labels:    LabelsToLabelsProto(s.Labels, nil),
+			Labels:    prompb.FromLabels(s.Labels, nil),
 			Timestamp: s.T,
 			Value:     s.V,
 		}
@@ -1040,7 +1040,7 @@ func (c *TestWriteClient) expectHistograms(hh []record.RefHistogramSample, serie
 
 	for _, h := range hh {
 		tsID := getSeriesIDFromRef(series[h.Ref])
-		c.expectedHistograms[tsID] = append(c.expectedHistograms[tsID], HistogramToHistogramProto(h.T, h.H))
+		c.expectedHistograms[tsID] = append(c.expectedHistograms[tsID], prompb.FromIntHistogram(h.T, h.H))
 	}
 }
 
@@ -1053,7 +1053,7 @@ func (c *TestWriteClient) expectFloatHistograms(fhs []record.RefFloatHistogramSa
 
 	for _, fh := range fhs {
 		tsID := getSeriesIDFromRef(series[fh.Ref])
-		c.expectedFloatHistograms[tsID] = append(c.expectedFloatHistograms[tsID], FloatHistogramToHistogramProto(fh.T, fh.FH))
+		c.expectedFloatHistograms[tsID] = append(c.expectedFloatHistograms[tsID], prompb.FromFloatHistogram(fh.T, fh.FH))
 	}
 }
 
@@ -1155,7 +1155,7 @@ func (c *TestWriteClient) Store(_ context.Context, req []byte, _ int) error {
 		var reqProtoV2 writev2.Request
 		err = proto.Unmarshal(reqBuf, &reqProtoV2)
 		if err == nil {
-			reqProto, err = V2WriteRequestToWriteRequest(&reqProtoV2)
+			reqProto, err = v2RequesToWriteRequest(&reqProtoV2)
 		}
 	}
 	if err != nil {
@@ -1166,9 +1166,9 @@ func (c *TestWriteClient) Store(_ context.Context, req []byte, _ int) error {
 		return errors.New("invalid request, no timeseries")
 	}
 
-	builder := labels.NewScratchBuilder(0)
+	b := labels.NewScratchBuilder(0)
 	for _, ts := range reqProto.Timeseries {
-		labels := LabelProtosToLabels(&builder, ts.Labels)
+		labels := ts.ToLabels(&b, nil)
 		tsID := labels.String()
 		if len(ts.Samples) > 0 {
 			c.receivedSamples[tsID] = append(c.receivedSamples[tsID], ts.Samples...)
