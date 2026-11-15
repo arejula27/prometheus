@@ -1,0 +1,438 @@
+goos: linux
+goarch: amd64
+pkg: github.com/prometheus/prometheus/storage/remote/arrowexp
+cpu: 12th Gen Intel(R) Core(TM) i7-12700H
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    5376	    218578 ns/op	     19411 rawB/op	      8689 wireB/op	      43 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    5798	    200523 ns/op	     19411 rawB/op	      8689 wireB/op	      40 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    6273	    186346 ns/op	     19411 rawB/op	      8689 wireB/op	      37 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    6220	    191766 ns/op	     19411 rawB/op	      8689 wireB/op	      37 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    6224	    190685 ns/op	     19411 rawB/op	      8689 wireB/op	      37 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    5972	    187482 ns/op	     19411 rawB/op	      8689 wireB/op	      39 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    5467	    241015 ns/op	     37042 rawB/op	     10210 wireB/op	  108211 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    4408	    237074 ns/op	     37042 rawB/op	     10210 wireB/op	  108220 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    5223	    241170 ns/op	     37042 rawB/op	     10210 wireB/op	  108213 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    5218	    241426 ns/op	     37042 rawB/op	     10210 wireB/op	  108213 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    5035	    403741 ns/op	     37042 rawB/op	     10210 wireB/op	  108214 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    3352	    379313 ns/op	     37042 rawB/op	     10210 wireB/op	  108233 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    1203	    967976 ns/op	     28368 rawB/op	      6946 wireB/op	  145419 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    1646	    781179 ns/op	     28368 rawB/op	      6946 wireB/op	  145391 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    1629	    893710 ns/op	     28368 rawB/op	      6946 wireB/op	  145391 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    1123	    906872 ns/op	     28368 rawB/op	      6946 wireB/op	  145427 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    1623	    715786 ns/op	     28368 rawB/op	      6946 wireB/op	  145391 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    2142	    660416 ns/op	     28368 rawB/op	      6946 wireB/op	  145372 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    4035	    291564 ns/op	     19411 rawB/op	      5665 wireB/op	     881 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3625	    312351 ns/op	     19411 rawB/op	      5665 wireB/op	     979 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3790	    296552 ns/op	     19411 rawB/op	      5665 wireB/op	     936 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3741	    330718 ns/op	     19411 rawB/op	      5665 wireB/op	     949 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3711	    317033 ns/op	     19411 rawB/op	      5665 wireB/op	     956 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3669	    306957 ns/op	     19411 rawB/op	      5665 wireB/op	     967 B/op	       0 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    2541	    394958 ns/op	     37042 rawB/op	      7549 wireB/op	  109558 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    2606	    401505 ns/op	     37042 rawB/op	      7549 wireB/op	  109523 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    2865	    411589 ns/op	     37042 rawB/op	      7549 wireB/op	  109401 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    1783	    594761 ns/op	     37042 rawB/op	      7549 wireB/op	  110145 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    2900	    422451 ns/op	     37042 rawB/op	      7549 wireB/op	  109387 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    1788	    605694 ns/op	     37042 rawB/op	      7549 wireB/op	  110140 B/op	     160 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    2491	    672536 ns/op	     28368 rawB/op	      5419 wireB/op	  146688 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    1807	    637377 ns/op	     28368 rawB/op	      5419 wireB/op	  147208 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    2132	    656875 ns/op	     28368 rawB/op	      5419 wireB/op	  146919 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    1311	    896497 ns/op	     28368 rawB/op	      5419 wireB/op	  147926 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    1456	    810616 ns/op	     28368 rawB/op	      5419 wireB/op	  147665 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    1440	    850961 ns/op	     28368 rawB/op	      5419 wireB/op	  147692 B/op	    3589 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	    1522	    770064 ns/op	     74628 rawB/op	     32847 wireB/op	     593 B/op	       6 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	    1610	    733573 ns/op	     74628 rawB/op	     32847 wireB/op	     561 B/op	       6 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	    1585	    750117 ns/op	     74628 rawB/op	     32847 wireB/op	     569 B/op	       6 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	    1600	    799750 ns/op	     74628 rawB/op	     32847 wireB/op	     564 B/op	       6 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	    1448	    798329 ns/op	     74628 rawB/op	     32847 wireB/op	     623 B/op	       6 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	    1612	    813815 ns/op	     74628 rawB/op	     32847 wireB/op	     560 B/op	       6 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	     938	   1580966 ns/op	    141970 rawB/op	     37652 wireB/op	  364657 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	    1400	   1034121 ns/op	    141970 rawB/op	     37652 wireB/op	  364414 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	     962	   1117193 ns/op	    141970 rawB/op	     37652 wireB/op	  364639 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	    1158	   1078235 ns/op	    141970 rawB/op	     37652 wireB/op	  364517 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	     997	   1084534 ns/op	    141970 rawB/op	     37652 wireB/op	  364614 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	     999	   1265302 ns/op	    141970 rawB/op	     37652 wireB/op	  364613 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	     452	   2543636 ns/op	    101512 rawB/op	     22560 wireB/op	  425402 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	     572	   2040276 ns/op	    101512 rawB/op	     22560 wireB/op	  425212 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	     567	   2156179 ns/op	    101512 rawB/op	     22560 wireB/op	  425218 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	     529	   2215898 ns/op	    101512 rawB/op	     22560 wireB/op	  425271 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	     468	   2514606 ns/op	    101512 rawB/op	     22560 wireB/op	  425372 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	     499	   2541669 ns/op	    101512 rawB/op	     22560 wireB/op	  425317 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     709	   1635155 ns/op	     74628 rawB/op	     23113 wireB/op	    6558 B/op	      14 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     853	   1413824 ns/op	     74628 rawB/op	     23113 wireB/op	    5451 B/op	      11 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     715	   1552350 ns/op	     74628 rawB/op	     23113 wireB/op	    6503 B/op	      14 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     931	   1260289 ns/op	     74628 rawB/op	     23113 wireB/op	    4994 B/op	      10 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     932	   1256546 ns/op	     74628 rawB/op	     23113 wireB/op	    4989 B/op	      10 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	    1023	   1162113 ns/op	     74628 rawB/op	     23113 wireB/op	    4545 B/op	       9 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1065	   1130633 ns/op	    141970 rawB/op	     26730 wireB/op	  399580 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	     874	   1331778 ns/op	    141970 rawB/op	     26730 wireB/op	  407374 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	     778	   1529892 ns/op	    141970 rawB/op	     26730 wireB/op	  412736 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1014	   1163226 ns/op	    141970 rawB/op	     26730 wireB/op	  401374 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1096	   1151380 ns/op	    141970 rawB/op	     26730 wireB/op	  398572 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	     896	   1180407 ns/op	    141970 rawB/op	     26730 wireB/op	  406307 B/op	     164 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	     560	   2308674 ns/op	    101512 rawB/op	     18332 wireB/op	  431164 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	     450	   2812224 ns/op	    101512 rawB/op	     18332 wireB/op	  432794 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	     362	   3293048 ns/op	    101512 rawB/op	     18332 wireB/op	  434811 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	     364	   3188926 ns/op	    101512 rawB/op	     18332 wireB/op	  434754 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	     409	   3326860 ns/op	    101512 rawB/op	     18332 wireB/op	  433626 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	     537	   2378327 ns/op	    101512 rawB/op	     18332 wireB/op	  431449 B/op	   12861 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	     254	   4254175 ns/op	    376809 rawB/op	    162036 wireB/op	   17583 B/op	     196 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	     301	   3819248 ns/op	    376809 rawB/op	    162036 wireB/op	   14837 B/op	     166 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	     279	   3940489 ns/op	    376809 rawB/op	    162036 wireB/op	   16007 B/op	     179 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	     297	   3857868 ns/op	    376809 rawB/op	    162036 wireB/op	   15037 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	     316	   3742623 ns/op	    376809 rawB/op	    162036 wireB/op	   14133 B/op	     158 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	     302	   3813634 ns/op	    376809 rawB/op	    162036 wireB/op	   14788 B/op	     165 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     264	   4812638 ns/op	    701930 rawB/op	    183009 wireB/op	 1525988 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     204	   5634793 ns/op	    701930 rawB/op	    183009 wireB/op	 1529608 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     216	   4640584 ns/op	    701930 rawB/op	    183009 wireB/op	 1528723 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     150	   7337522 ns/op	    701930 rawB/op	    183009 wireB/op	 1535342 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     193	   6675610 ns/op	    701930 rawB/op	    183009 wireB/op	 1530515 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     140	   8288852 ns/op	    701930 rawB/op	    183009 wireB/op	 1536890 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	      78	  15677147 ns/op	    491904 rawB/op	    106121 wireB/op	 2258390 B/op	   62321 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     100	  15705012 ns/op	    491904 rawB/op	    106121 wireB/op	 2251516 B/op	   62321 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	      82	  17825821 ns/op	    491904 rawB/op	    106121 wireB/op	 2256868 B/op	   62321 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	      97	  10792875 ns/op	    491904 rawB/op	    106121 wireB/op	 2252270 B/op	   62321 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     130	   9007153 ns/op	    491904 rawB/op	    106121 wireB/op	 2245891 B/op	   62320 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     100	  14372910 ns/op	    491904 rawB/op	    106121 wireB/op	 2251517 B/op	   62321 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     162	   7629706 ns/op	    376809 rawB/op	    109338 wireB/op	  261186 B/op	     309 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     163	   6576560 ns/op	    376809 rawB/op	    109338 wireB/op	  259584 B/op	     307 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     147	   6994580 ns/op	    376809 rawB/op	    109338 wireB/op	  287837 B/op	     340 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     171	   6701435 ns/op	    376809 rawB/op	    109338 wireB/op	  247439 B/op	     293 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     144	   6969025 ns/op	    376809 rawB/op	    109338 wireB/op	  293834 B/op	     348 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     180	   6409920 ns/op	    376809 rawB/op	    109338 wireB/op	  235067 B/op	     278 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     218	   5513996 ns/op	    701930 rawB/op	    126586 wireB/op	 1699495 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     214	   4945050 ns/op	    701930 rawB/op	    126586 wireB/op	 1702967 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     211	   5033677 ns/op	    701930 rawB/op	    126586 wireB/op	 1705659 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     213	   5100096 ns/op	    701930 rawB/op	    126586 wireB/op	 1703856 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     259	   4492341 ns/op	    701930 rawB/op	    126586 wireB/op	 1670080 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     229	   5521895 ns/op	    701930 rawB/op	    126586 wireB/op	 1690569 B/op	     168 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	      94	  12256630 ns/op	    491904 rawB/op	     83965 wireB/op	 2649418 B/op	   62322 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     157	   8057365 ns/op	    491904 rawB/op	     83965 wireB/op	 2479968 B/op	   62321 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     117	  10361584 ns/op	    491904 rawB/op	     83965 wireB/op	 2566405 B/op	   62321 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     118	   9665977 ns/op	    491904 rawB/op	     83965 wireB/op	 2563530 B/op	   62321 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     104	  10631592 ns/op	    491904 rawB/op	     83965 wireB/op	 2608814 B/op	   62322 allocs/op
+BenchmarkEncode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     135	   9068471 ns/op	    491904 rawB/op	     83965 wireB/op	 2521170 B/op	   62321 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    3333	    373664 ns/op	     38061 rawB/op	     17638 wireB/op	     122 B/op	       0 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    3268	    391001 ns/op	     38061 rawB/op	     17638 wireB/op	     125 B/op	       0 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    3256	    356895 ns/op	     38061 rawB/op	     17638 wireB/op	     125 B/op	       0 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    2826	    417478 ns/op	     38061 rawB/op	     17638 wireB/op	     144 B/op	       1 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    2994	    380362 ns/op	     38061 rawB/op	     17638 wireB/op	     136 B/op	       1 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    3273	    360316 ns/op	     38061 rawB/op	     17638 wireB/op	     125 B/op	       0 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    2690	    790833 ns/op	     68234 rawB/op	     24187 wireB/op	  199657 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    1281	    828364 ns/op	     68234 rawB/op	     24187 wireB/op	  199825 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    1572	    842005 ns/op	     68234 rawB/op	     24187 wireB/op	  199766 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    1473	    828369 ns/op	     68234 rawB/op	     24187 wireB/op	  199783 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    1486	    920894 ns/op	     68234 rawB/op	     24187 wireB/op	  199781 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    1237	    965121 ns/op	     68234 rawB/op	     24187 wireB/op	  199837 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	     657	   1641490 ns/op	     57376 rawB/op	     17310 wireB/op	  317160 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	     733	   1812403 ns/op	     57376 rawB/op	     17310 wireB/op	  317100 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	     613	   1903691 ns/op	     57376 rawB/op	     17310 wireB/op	  317202 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	     690	   1641111 ns/op	     57376 rawB/op	     17310 wireB/op	  317132 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	     699	   1699081 ns/op	     57376 rawB/op	     17310 wireB/op	  317125 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	     783	   1657097 ns/op	     57376 rawB/op	     17310 wireB/op	  317067 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1741	    658834 ns/op	     38061 rawB/op	     12040 wireB/op	    2200 B/op	       1 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1923	    604062 ns/op	     38061 rawB/op	     12040 wireB/op	    1992 B/op	       1 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1935	    633763 ns/op	     38061 rawB/op	     12040 wireB/op	    1980 B/op	       1 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1800	    642308 ns/op	     38061 rawB/op	     12040 wireB/op	    2128 B/op	       1 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1724	    670674 ns/op	     38061 rawB/op	     12040 wireB/op	    2222 B/op	       1 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1912	    663239 ns/op	     38061 rawB/op	     12040 wireB/op	    2004 B/op	       1 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	    1359	   1271796 ns/op	     68234 rawB/op	     15488 wireB/op	  202430 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	     807	   1346769 ns/op	     68234 rawB/op	     15488 wireB/op	  204431 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	     810	   1347438 ns/op	     68234 rawB/op	     15488 wireB/op	  204413 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	     880	   1260121 ns/op	     68234 rawB/op	     15488 wireB/op	  204022 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	    1612	   1271756 ns/op	     68234 rawB/op	     15488 wireB/op	  201970 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	     942	   1216258 ns/op	     68234 rawB/op	     15488 wireB/op	  203725 B/op	     162 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	     517	   2290413 ns/op	     57376 rawB/op	     10094 wireB/op	  323747 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	     583	   2018404 ns/op	     57376 rawB/op	     10094 wireB/op	  322936 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	     609	   2002749 ns/op	     57376 rawB/op	     10094 wireB/op	  322664 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	     571	   1824371 ns/op	     57376 rawB/op	     10094 wireB/op	  323070 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	     573	   1963596 ns/op	     57376 rawB/op	     10094 wireB/op	  323047 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	     738	   1756298 ns/op	     57376 rawB/op	     10094 wireB/op	  321600 B/op	    6290 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     618	   1753974 ns/op	    146081 rawB/op	     66350 wireB/op	    2435 B/op	      19 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     733	   2083219 ns/op	    146081 rawB/op	     66350 wireB/op	    2053 B/op	      16 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     739	   1654733 ns/op	    146081 rawB/op	     66350 wireB/op	    2036 B/op	      16 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     735	   1603867 ns/op	    146081 rawB/op	     66350 wireB/op	    2047 B/op	      16 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     738	   1768581 ns/op	    146081 rawB/op	     66350 wireB/op	    2039 B/op	      16 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     664	   1738642 ns/op	    146081 rawB/op	     66350 wireB/op	    2266 B/op	      18 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     386	   3472180 ns/op	    261867 rawB/op	     82177 wireB/op	  703906 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     283	   3738998 ns/op	    261867 rawB/op	     82177 wireB/op	  705288 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     328	   3488286 ns/op	    261867 rawB/op	     82177 wireB/op	  704577 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     298	   3970106 ns/op	    261867 rawB/op	     82177 wireB/op	  705026 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     351	   3411937 ns/op	    261867 rawB/op	     82177 wireB/op	  704284 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     350	   3467399 ns/op	    261867 rawB/op	     82177 wireB/op	  704297 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     195	   6259792 ns/op	    205968 rawB/op	     57380 wireB/op	  974953 B/op	   22547 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     201	   6044610 ns/op	    205968 rawB/op	     57380 wireB/op	  974788 B/op	   22547 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     192	   6225119 ns/op	    205968 rawB/op	     57380 wireB/op	  975040 B/op	   22547 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     190	   6082328 ns/op	    205968 rawB/op	     57380 wireB/op	  975098 B/op	   22547 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     198	   6076016 ns/op	    205968 rawB/op	     57380 wireB/op	  974870 B/op	   22547 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     204	   6140459 ns/op	    205968 rawB/op	     57380 wireB/op	  974710 B/op	   22546 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     358	   2951940 ns/op	    146081 rawB/op	     45376 wireB/op	  110085 B/op	      33 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     406	   2820402 ns/op	    146081 rawB/op	     45376 wireB/op	   97070 B/op	      29 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     354	   2964020 ns/op	    146081 rawB/op	     45376 wireB/op	  111329 B/op	      34 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     412	   2988093 ns/op	    146081 rawB/op	     45376 wireB/op	   95656 B/op	      29 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     331	   3035506 ns/op	    146081 rawB/op	     45376 wireB/op	  119065 B/op	      36 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     414	   3332678 ns/op	    146081 rawB/op	     45376 wireB/op	   95194 B/op	      29 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     355	   3237420 ns/op	    261867 rawB/op	     54562 wireB/op	  810067 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     316	   3743453 ns/op	    261867 rawB/op	     54562 wireB/op	  823637 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     332	   3288098 ns/op	    261867 rawB/op	     54562 wireB/op	  817684 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     332	   3627308 ns/op	    261867 rawB/op	     54562 wireB/op	  817684 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     346	   2989771 ns/op	    261867 rawB/op	     54562 wireB/op	  812927 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     410	   3312001 ns/op	    261867 rawB/op	     54562 wireB/op	  795317 B/op	     166 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     242	   4960357 ns/op	    205968 rawB/op	     30682 wireB/op	 1126742 B/op	   22547 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     303	   4263062 ns/op	    205968 rawB/op	     30682 wireB/op	 1095071 B/op	   22546 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     176	   6567676 ns/op	    205968 rawB/op	     30682 wireB/op	 1185737 B/op	   22547 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     226	   4611664 ns/op	    205968 rawB/op	     30682 wireB/op	 1137880 B/op	   22547 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     286	   4804290 ns/op	    205968 rawB/op	     30682 wireB/op	 1102540 B/op	   22546 allocs/op
+BenchmarkEncode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     285	   4198829 ns/op	    205968 rawB/op	     30682 wireB/op	 1103007 B/op	   22546 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	     134	   8635359 ns/op	    692997 rawB/op	    315861 wireB/op	   53518 B/op	     448 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	     128	   9014672 ns/op	    692997 rawB/op	    315861 wireB/op	   56027 B/op	     469 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	     128	   8806086 ns/op	    692997 rawB/op	    315861 wireB/op	   56027 B/op	     469 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	     147	   8060037 ns/op	    692997 rawB/op	    315861 wireB/op	   48785 B/op	     408 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	     146	   8103395 ns/op	    692997 rawB/op	    315861 wireB/op	   49119 B/op	     411 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	     146	   8099658 ns/op	    692997 rawB/op	    315861 wireB/op	   49119 B/op	     411 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	     100	  13044960 ns/op	   1262827 rawB/op	    408105 wireB/op	 2884927 B/op	     170 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	     106	  12035263 ns/op	   1262827 rawB/op	    408105 wireB/op	 2881124 B/op	     170 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	      92	  13515992 ns/op	   1262827 rawB/op	    408105 wireB/op	 2890769 B/op	     170 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	      81	  14186303 ns/op	   1262827 rawB/op	    408105 wireB/op	 2900686 B/op	     171 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	      88	  13141009 ns/op	   1262827 rawB/op	    408105 wireB/op	 2894088 B/op	     170 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	      94	  13279788 ns/op	   1262827 rawB/op	    408105 wireB/op	 2889215 B/op	     170 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	      39	  27509455 ns/op	    966704 rawB/op	    270671 wireB/op	 4857407 B/op	  109237 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	      40	  25633671 ns/op	    966704 rawB/op	    270671 wireB/op	 4854438 B/op	  109236 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	      42	  24577769 ns/op	    966704 rawB/op	    270671 wireB/op	 4848925 B/op	  109236 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	      42	  24150199 ns/op	    966704 rawB/op	    270671 wireB/op	 4848925 B/op	  109236 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	      69	  25823702 ns/op	    966704 rawB/op	    270671 wireB/op	 4805780 B/op	  109232 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	      46	  24741507 ns/op	    966704 rawB/op	    270671 wireB/op	 4839339 B/op	  109235 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      67	  15413895 ns/op	    692997 rawB/op	    197276 wireB/op	  672664 B/op	     897 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      74	  14708833 ns/op	    692997 rawB/op	    197276 wireB/op	  609033 B/op	     812 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      70	  15282855 ns/op	    692997 rawB/op	    197276 wireB/op	  643835 B/op	     859 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      80	  13732982 ns/op	    692997 rawB/op	    197276 wireB/op	  563356 B/op	     751 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      85	  13295304 ns/op	    692997 rawB/op	    197276 wireB/op	  530217 B/op	     707 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      91	  12764039 ns/op	    692997 rawB/op	    197276 wireB/op	  495258 B/op	     661 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	      86	  13888169 ns/op	   1262827 rawB/op	    234289 wireB/op	 3324814 B/op	     172 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	      81	  14325074 ns/op	   1262827 rawB/op	    234289 wireB/op	 3356114 B/op	     172 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	      79	  14059778 ns/op	   1262827 rawB/op	    234289 wireB/op	 3369744 B/op	     172 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	      88	  13554613 ns/op	   1262827 rawB/op	    234289 wireB/op	 3313289 B/op	     172 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	      84	  13569256 ns/op	   1262827 rawB/op	    234289 wireB/op	 3336887 B/op	     172 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	      87	  13292659 ns/op	   1262827 rawB/op	    234289 wireB/op	 3318985 B/op	     172 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	      67	  17686721 ns/op	    966704 rawB/op	    132947 wireB/op	 5364242 B/op	  109233 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	      63	  18506364 ns/op	    966704 rawB/op	    132947 wireB/op	 5403963 B/op	  109234 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	      62	  18730911 ns/op	    966704 rawB/op	    132947 wireB/op	 5414692 B/op	  109234 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	      64	  18577248 ns/op	    966704 rawB/op	    132947 wireB/op	 5393567 B/op	  109234 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	      68	  18795898 ns/op	    966704 rawB/op	    132947 wireB/op	 5355042 B/op	  109233 allocs/op
+BenchmarkEncode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	      50	  20125407 ns/op	    966704 rawB/op	    132947 wireB/op	 5576939 B/op	  109236 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    3398	    402383 ns/op	  337622 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    3774	    409131 ns/op	  337621 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    2234	    455516 ns/op	  337625 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    3614	    355133 ns/op	  337621 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    3126	    335452 ns/op	  337622 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=rw2proto-2         	    2762	    403743 ns/op	  337623 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    8631	    140504 ns/op	  130508 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    8277	    139598 ns/op	  130509 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    8760	    138295 ns/op	  130508 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    8956	    138813 ns/op	  130508 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    8632	    139437 ns/op	  130508 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowrefs-2        	    8824	    223555 ns/op	  130508 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    4934	    242723 ns/op	  128975 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    5758	    195825 ns/op	  128974 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    6250	    231867 ns/op	  128973 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    6024	    211987 ns/op	  128973 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    5269	    215159 ns/op	  128974 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=snappy/codec=arrowwide-2        	    6696	    220527 ns/op	  128973 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3116	    366618 ns/op	  337711 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3819	    304684 ns/op	  337705 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3753	    323346 ns/op	  337707 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3271	    431888 ns/op	  337711 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3043	    414308 ns/op	  337711 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=rw2proto-2           	    3115	    375382 ns/op	  337716 B/op	    1580 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    5978	    193232 ns/op	  130597 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    5672	    187384 ns/op	  130595 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    6364	    206673 ns/op	  130594 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    5974	    247900 ns/op	  130607 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    5946	    232125 ns/op	  130585 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowrefs-2          	    5317	    277402 ns/op	  130604 B/op	     610 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    3186	    348865 ns/op	  129076 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    5050	    275142 ns/op	  129052 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    5938	    203447 ns/op	  129050 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    5482	    226331 ns/op	  129052 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    5083	    247856 ns/op	  129058 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=500/compr=zstd/codec=arrowwide-2          	    4058	    256750 ns/op	  129055 B/op	     793 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	     594	   1907837 ns/op	 1974426 B/op	    6130 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	     471	   2523009 ns/op	 1974462 B/op	    6130 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	     424	   3184343 ns/op	 1974482 B/op	    6130 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	     480	   2440703 ns/op	 1974459 B/op	    6130 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	     765	   2202364 ns/op	 1974395 B/op	    6130 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=rw2proto-2        	     502	   2162940 ns/op	 1974452 B/op	    6130 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	    1642	    660304 ns/op	  470370 B/op	    2110 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	    2010	    651539 ns/op	  470353 B/op	    2110 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	    1734	    848904 ns/op	  470365 B/op	    2110 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	    1708	    786681 ns/op	  470366 B/op	    2110 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	    2013	    716936 ns/op	  470353 B/op	    2110 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowrefs-2       	    1280	    913531 ns/op	  470395 B/op	    2110 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	    1545	    895499 ns/op	  444237 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	    1102	   1119869 ns/op	  444266 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	    2037	   1124365 ns/op	  444220 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	    1275	   1013462 ns/op	  444252 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	    1374	   1186075 ns/op	  444246 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=snappy/codec=arrowwide-2       	    1068	   1148335 ns/op	  444272 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     538	   2120615 ns/op	 1975246 B/op	    6134 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     747	   1522405 ns/op	 1975102 B/op	    6134 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     794	   1633644 ns/op	 1975078 B/op	    6134 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     777	   1501961 ns/op	 1975084 B/op	    6133 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     758	   1543581 ns/op	 1975096 B/op	    6134 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=rw2proto-2          	     744	   2283911 ns/op	 1975103 B/op	    6134 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1011	   1035575 ns/op	  471060 B/op	    2111 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1365	   1003418 ns/op	  470891 B/op	    2111 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1306	   1058779 ns/op	  470904 B/op	    2111 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1206	   1170594 ns/op	  470960 B/op	    2111 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1124	   1124735 ns/op	  470975 B/op	    2111 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowrefs-2         	    1746	    881066 ns/op	  470824 B/op	    2111 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	    1377	    935774 ns/op	  444524 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	    1303	   1044050 ns/op	  444535 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	    1168	    889270 ns/op	  444576 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	    1431	    836626 ns/op	  444520 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	    1252	    928946 ns/op	  444549 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=2000/compr=zstd/codec=arrowwide-2         	    1009	   1198471 ns/op	  444619 B/op	    2293 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	      99	  12960505 ns/op	12045683 B/op	   30381 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	      91	  13829398 ns/op	12046018 B/op	   30381 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	      76	  13335822 ns/op	12046836 B/op	   30381 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	      99	  12635737 ns/op	12045683 B/op	   30381 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	     100	  11793956 ns/op	12045645 B/op	   30381 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=rw2proto-2       	      99	  10820186 ns/op	12045683 B/op	   30381 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     309	   3799714 ns/op	 2324209 B/op	   10110 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     268	   4272354 ns/op	 2324558 B/op	   10110 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     420	   4232860 ns/op	 2323606 B/op	   10110 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     244	   4446395 ns/op	 2324817 B/op	   10110 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     342	   4417917 ns/op	 2323989 B/op	   10110 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowrefs-2      	     226	   5025480 ns/op	 2325047 B/op	   10110 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     150	   7332227 ns/op	 2127909 B/op	   10293 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     298	   4622805 ns/op	 2126230 B/op	   10293 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     321	   3895162 ns/op	 2126113 B/op	   10293 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     322	   4322173 ns/op	 2126109 B/op	   10293 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     241	   5744658 ns/op	 2126637 B/op	   10293 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=snappy/codec=arrowwide-2      	     314	   3393795 ns/op	 2126144 B/op	   10293 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     128	   9545750 ns/op	12047702 B/op	   30385 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	      88	  12832552 ns/op	12050153 B/op	   30385 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     133	   8931392 ns/op	12047500 B/op	   30385 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     135	   8895183 ns/op	12047423 B/op	   30385 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     134	   8891729 ns/op	12047461 B/op	   30385 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=rw2proto-2         	     100	  10407224 ns/op	12049212 B/op	   30385 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     375	   4740978 ns/op	 2325339 B/op	   10113 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     214	   5771615 ns/op	 2327629 B/op	   10113 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     200	   5998777 ns/op	 2328007 B/op	   10113 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     198	   5684425 ns/op	 2328061 B/op	   10113 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     217	   5936023 ns/op	 2327555 B/op	   10113 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowrefs-2        	     213	   5103353 ns/op	 2327652 B/op	   10113 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     223	   5376265 ns/op	 2128870 B/op	   10296 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     234	   5375459 ns/op	 2128624 B/op	   10296 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     195	   6271386 ns/op	 2129382 B/op	   10296 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     171	   6599862 ns/op	 2129879 B/op	   10296 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     198	   6443831 ns/op	 2129262 B/op	   10296 allocs/op
+BenchmarkDecode/data=lowcard/samples=10000/compr=zstd/codec=arrowwide-2        	     194	   6021709 ns/op	 2129320 B/op	   10296 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    1640	    743040 ns/op	  464329 B/op	    2058 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    1503	    728879 ns/op	  464331 B/op	    2058 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    1573	    764162 ns/op	  464330 B/op	    2058 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    1644	    768516 ns/op	  464329 B/op	    2058 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    1570	    902008 ns/op	  464330 B/op	    2058 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=rw2proto-2        	    1322	    924522 ns/op	  464335 B/op	    2058 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    2576	    512288 ns/op	  238085 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    2496	    491404 ns/op	  238085 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    2848	    399970 ns/op	  238082 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    2863	    399761 ns/op	  238082 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    2976	    412377 ns/op	  238081 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowrefs-2       	    2230	    471851 ns/op	  238089 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	    1803	    621776 ns/op	  259273 B/op	    1021 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	    2196	    730418 ns/op	  259268 B/op	    1021 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	    2215	    674654 ns/op	  259268 B/op	    1021 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	    2150	    563648 ns/op	  259268 B/op	    1021 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	    1796	    702072 ns/op	  259275 B/op	    1021 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=snappy/codec=arrowwide-2       	    1476	    748021 ns/op	  259285 B/op	    1021 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1038	   1060794 ns/op	  464666 B/op	    2059 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1502	    753714 ns/op	  464641 B/op	    2059 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1622	    826874 ns/op	  464618 B/op	    2059 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1308	    966095 ns/op	  464641 B/op	    2059 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1740	    803513 ns/op	  464612 B/op	    2059 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=rw2proto-2          	    1543	    909259 ns/op	  464598 B/op	    2059 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	    3714	    460932 ns/op	  238250 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	    2004	    572082 ns/op	  238334 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	    2359	    517888 ns/op	  238300 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	    2719	    468982 ns/op	  238279 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	    2587	    463335 ns/op	  238286 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowrefs-2         	    2204	    467605 ns/op	  238330 B/op	     610 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	    1894	    558260 ns/op	  259509 B/op	    1022 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	    1842	    615889 ns/op	  259508 B/op	    1022 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	    1838	    649077 ns/op	  259548 B/op	    1022 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	    1801	    632062 ns/op	  259515 B/op	    1022 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	    1885	    632568 ns/op	  259511 B/op	    1022 allocs/op
+BenchmarkDecode/data=highcard/samples=500/compr=zstd/codec=arrowwide-2         	    1669	    611095 ns/op	  259525 B/op	    1022 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     362	   3310483 ns/op	 2510666 B/op	    7681 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     360	   3529834 ns/op	 2510668 B/op	    7681 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     364	   3515160 ns/op	 2510663 B/op	    7681 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     344	   3504595 ns/op	 2510687 B/op	    7681 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     325	   3640246 ns/op	 2510712 B/op	    7681 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=rw2proto-2       	     320	   3619132 ns/op	 2510719 B/op	    7681 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     711	   1735949 ns/op	  916474 B/op	    2110 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     627	   1778133 ns/op	  916523 B/op	    2110 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     752	   1570435 ns/op	  916453 B/op	    2110 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     764	   1673225 ns/op	  916448 B/op	    2110 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     788	   1631183 ns/op	  916437 B/op	    2110 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowrefs-2      	     748	   1659304 ns/op	  916455 B/op	    2110 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     578	   2133668 ns/op	  890490 B/op	    2528 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     531	   2120527 ns/op	  890520 B/op	    2528 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     610	   2067378 ns/op	  890481 B/op	    2528 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     588	   2113649 ns/op	  890482 B/op	    2528 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     615	   2010298 ns/op	  890480 B/op	    2528 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=snappy/codec=arrowwide-2      	     597	   1919018 ns/op	  890487 B/op	    2528 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     318	   3625166 ns/op	 2513031 B/op	    7686 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     340	   3501045 ns/op	 2512774 B/op	    7686 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     337	   3834638 ns/op	 2512831 B/op	    7686 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     291	   4128345 ns/op	 2513070 B/op	    7686 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     283	   4162458 ns/op	 2513198 B/op	    7686 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=rw2proto-2         	     291	   4093373 ns/op	 2513310 B/op	    7686 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     607	   1864753 ns/op	  917637 B/op	    2112 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     678	   1795984 ns/op	  917569 B/op	    2112 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     642	   1828340 ns/op	  917625 B/op	    2112 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     681	   1801408 ns/op	  917640 B/op	    2112 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     604	   1946440 ns/op	  917678 B/op	    2112 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowrefs-2        	     504	   2010463 ns/op	  917850 B/op	    2112 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     548	   2147668 ns/op	  891635 B/op	    2529 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     537	   2398064 ns/op	  891639 B/op	    2529 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     868	   1533859 ns/op	  891176 B/op	    2530 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     468	   2276989 ns/op	  891802 B/op	    2529 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     604	   2053222 ns/op	  891495 B/op	    2529 allocs/op
+BenchmarkDecode/data=highcard/samples=2000/compr=zstd/codec=arrowwide-2        	     571	   2113984 ns/op	  891589 B/op	    2529 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	      60	  17565122 ns/op	14537973 B/op	   36355 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	      66	  20447519 ns/op	14536917 B/op	   36355 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	      54	  21917703 ns/op	14539265 B/op	   36355 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	      52	  22152709 ns/op	14539761 B/op	   36355 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	      57	  21971533 ns/op	14538585 B/op	   36355 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=rw2proto-2      	      66	  18000221 ns/op	14536917 B/op	   36355 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	     175	   6845832 ns/op	 4478757 B/op	   10110 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	     175	   6894471 ns/op	 4478757 B/op	   10110 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	     169	   7039015 ns/op	 4479015 B/op	   10110 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	     157	   7961865 ns/op	 4479589 B/op	   10110 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	     145	   7921131 ns/op	 4480259 B/op	   10110 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowrefs-2     	     156	   7607958 ns/op	 4479641 B/op	   10110 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	     136	   8861429 ns/op	 4218828 B/op	   10530 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	     135	   8712877 ns/op	 4218874 B/op	   10530 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	     147	   8052114 ns/op	 4218283 B/op	   10530 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	     150	   8019372 ns/op	 4218145 B/op	   10530 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	     142	   8193070 ns/op	 4218525 B/op	   10530 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=snappy/codec=arrowwide-2     	     144	   8622389 ns/op	 4218415 B/op	   10530 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      61	  20005386 ns/op	14546785 B/op	   36361 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      57	  22758886 ns/op	14548169 B/op	   36361 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      50	  22312596 ns/op	14551124 B/op	   36361 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      54	  20927294 ns/op	14549342 B/op	   36361 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      63	  20128305 ns/op	14546159 B/op	   36361 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=rw2proto-2        	      52	  19729083 ns/op	14550198 B/op	   36361 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	     144	   8295260 ns/op	 4484492 B/op	   10113 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	     152	   8059391 ns/op	 4483829 B/op	   10113 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	     136	   8714814 ns/op	 4485225 B/op	   10113 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	     136	   8701479 ns/op	 4485268 B/op	   10113 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	     136	   8765603 ns/op	 4485275 B/op	   10113 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowrefs-2       	     133	   8733418 ns/op	 4485532 B/op	   10113 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	     144	   9026682 ns/op	 4222442 B/op	   10534 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	     176	   6301478 ns/op	 4220604 B/op	   10534 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	     116	   9679322 ns/op	 4225044 B/op	   10534 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	     146	   8073750 ns/op	 4222305 B/op	   10534 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	     128	   9335077 ns/op	 4223726 B/op	   10534 allocs/op
+BenchmarkDecode/data=highcard/samples=10000/compr=zstd/codec=arrowwide-2       	     132	   8926266 ns/op	 4223458 B/op	   10534 allocs/op
+PASS
+ok  	github.com/prometheus/prometheus/storage/remote/arrowexp	530.740s

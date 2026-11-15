@@ -1,0 +1,120 @@
+goos: linux
+goarch: amd64
+pkg: github.com/prometheus/prometheus/storage/remote/arrowexp
+cpu: 12th Gen Intel(R) Core(TM) i7-12700H
+                                                  │   rw2proto    │               arrowrefs               │               arrowwide               │
+                                                  │    sec/op     │    sec/op      vs base                │    sec/op      vs base                │
+Encode/data=lowcard/samples=500/compr=snappy-2       191.2µ ± 14%    241.3µ ± 67%   +26.19% (p=0.002 n=6)    837.4µ ± 21%  +337.94% (p=0.002 n=6)
+Encode/data=lowcard/samples=500/compr=zstd-2         309.7µ ±  7%    417.0µ ± 45%   +34.67% (p=0.002 n=6)    741.6µ ± 21%  +139.49% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=snappy-2      784.2µ ±  6%   1100.9µ ± 44%   +40.38% (p=0.002 n=6)   2365.3µ ± 14%  +201.61% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=zstd-2        1.337m ± 22%    1.172m ± 31%         ~ (p=0.180 n=6)    3.001m ± 23%  +124.42% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=snappy-2     3.839m ± 11%    6.155m ± 35%   +60.35% (p=0.002 n=6)   15.025m ± 40%  +291.42% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=zstd-2       6.835m ± 12%    5.067m ± 11%   -25.87% (p=0.002 n=6)   10.014m ± 22%   +46.50% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=snappy-2      377.0µ ± 11%    835.2µ ± 16%  +121.53% (p=0.002 n=6)   1678.1µ ± 13%  +345.10% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=zstd-2        650.6µ ±  7%   1271.8µ ±  6%   +95.49% (p=0.002 n=6)   1983.2µ ± 15%  +204.84% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=snappy-2     1.746m ± 19%    3.480m ± 14%   +99.29% (p=0.002 n=6)    6.111m ±  2%  +249.96% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=zstd-2       2.976m ± 12%    3.300m ± 13%   +10.89% (p=0.041 n=6)    4.708m ± 40%   +58.20% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=snappy-2    8.369m ±  8%   13.210m ±  9%   +57.84% (p=0.002 n=6)   25.188m ±  9%  +200.95% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=zstd-2      14.22m ± 10%    13.73m ±  4%         ~ (p=0.589 n=6)    18.65m ±  8%   +31.17% (p=0.002 n=6)
+Decode/data=lowcard/samples=500/compr=snappy-2       403.1µ ± 17%    139.5µ ± 60%   -65.39% (p=0.002 n=6)    217.8µ ± 11%   -45.95% (p=0.002 n=6)
+Decode/data=lowcard/samples=500/compr=zstd-2         371.0µ ± 18%    219.4µ ± 26%   -40.86% (p=0.002 n=6)    252.3µ ± 38%   -31.99% (p=0.009 n=6)
+Decode/data=lowcard/samples=2000/compr=snappy-2     2321.5µ ± 37%    751.8µ ± 22%   -67.62% (p=0.002 n=6)   1122.1µ ± 20%   -51.66% (p=0.002 n=6)
+Decode/data=lowcard/samples=2000/compr=zstd-2       1588.6µ ± 44%   1047.2µ ± 16%   -34.08% (p=0.002 n=6)    932.4µ ± 29%   -41.31% (p=0.002 n=6)
+Decode/data=lowcard/samples=10000/compr=snappy-2    12.798m ± 15%    4.345m ± 16%   -66.05% (p=0.002 n=6)    4.472m ± 64%   -65.05% (p=0.002 n=6)
+Decode/data=lowcard/samples=10000/compr=zstd-2       9.239m ± 39%    5.728m ± 17%   -38.00% (p=0.002 n=6)    6.147m ± 13%   -33.47% (p=0.002 n=6)
+Decode/data=highcard/samples=500/compr=snappy-2      766.3µ ± 21%    442.1µ ± 16%   -42.31% (p=0.002 n=6)    688.4µ ± 18%   -10.18% (p=0.015 n=6)
+Decode/data=highcard/samples=500/compr=zstd-2        868.1µ ± 22%    468.3µ ± 22%   -46.05% (p=0.002 n=6)    624.0µ ± 11%   -28.12% (p=0.002 n=6)
+Decode/data=highcard/samples=2000/compr=snappy-2     3.522m ±  6%    1.666m ±  7%   -52.70% (p=0.002 n=6)    2.091m ±  8%   -40.65% (p=0.002 n=6)
+Decode/data=highcard/samples=2000/compr=zstd-2       3.964m ± 12%    1.847m ±  9%   -53.42% (p=0.002 n=6)    2.131m ± 28%   -46.25% (p=0.002 n=6)
+Decode/data=highcard/samples=10000/compr=snappy-2   21.183m ± 17%    7.323m ±  9%   -65.43% (p=0.002 n=6)    8.408m ±  5%   -60.31% (p=0.002 n=6)
+Decode/data=highcard/samples=10000/compr=zstd-2     20.528m ± 11%    8.708m ±  7%   -57.58% (p=0.002 n=6)    8.976m ± 30%   -56.27% (p=0.002 n=6)
+geomean                                              2.116m          1.669m         -21.13%                  2.569m         +21.38%
+
+                                                  │  rw2proto   │              arrowrefs              │              arrowwide              │
+                                                  │   rawB/op   │   rawB/op     vs base               │   rawB/op     vs base               │
+Encode/data=lowcard/samples=500/compr=snappy-2      19.41k ± 0%    37.04k ± 0%  +90.83% (p=0.002 n=6)    28.37k ± 0%  +46.14% (p=0.002 n=6)
+Encode/data=lowcard/samples=500/compr=zstd-2        19.41k ± 0%    37.04k ± 0%  +90.83% (p=0.002 n=6)    28.37k ± 0%  +46.14% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=snappy-2     74.63k ± 0%   141.97k ± 0%  +90.24% (p=0.002 n=6)   101.51k ± 0%  +36.02% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=zstd-2       74.63k ± 0%   141.97k ± 0%  +90.24% (p=0.002 n=6)   101.51k ± 0%  +36.02% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=snappy-2    376.8k ± 0%    701.9k ± 0%  +86.28% (p=0.002 n=6)    491.9k ± 0%  +30.54% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=zstd-2      376.8k ± 0%    701.9k ± 0%  +86.28% (p=0.002 n=6)    491.9k ± 0%  +30.54% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=snappy-2     38.06k ± 0%    68.23k ± 0%  +79.28% (p=0.002 n=6)    57.38k ± 0%  +50.75% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=zstd-2       38.06k ± 0%    68.23k ± 0%  +79.28% (p=0.002 n=6)    57.38k ± 0%  +50.75% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=snappy-2    146.1k ± 0%    261.9k ± 0%  +79.26% (p=0.002 n=6)    206.0k ± 0%  +41.00% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=zstd-2      146.1k ± 0%    261.9k ± 0%  +79.26% (p=0.002 n=6)    206.0k ± 0%  +41.00% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=snappy-2   693.0k ± 0%   1262.8k ± 0%  +82.23% (p=0.002 n=6)    966.7k ± 0%  +39.50% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=zstd-2     693.0k ± 0%   1262.8k ± 0%  +82.23% (p=0.002 n=6)    966.7k ± 0%  +39.50% (p=0.002 n=6)
+geomean                                             113.2k         209.0k       +84.62%                  159.0k       +40.51%
+
+                                                  │   rw2proto   │              arrowrefs              │             arrowwide              │
+                                                  │   wireB/op   │   wireB/op    vs base               │  wireB/op    vs base               │
+Encode/data=lowcard/samples=500/compr=snappy-2       8.689k ± 0%   10.210k ± 0%  +17.50% (p=0.002 n=6)   6.946k ± 0%  -20.06% (p=0.002 n=6)
+Encode/data=lowcard/samples=500/compr=zstd-2         5.665k ± 0%    7.549k ± 0%  +33.26% (p=0.002 n=6)   5.419k ± 0%   -4.34% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=snappy-2      32.85k ± 0%    37.65k ± 0%  +14.63% (p=0.002 n=6)   22.56k ± 0%  -31.32% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=zstd-2        23.11k ± 0%    26.73k ± 0%  +15.65% (p=0.002 n=6)   18.33k ± 0%  -20.69% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=snappy-2     162.0k ± 0%    183.0k ± 0%  +12.94% (p=0.002 n=6)   106.1k ± 0%  -34.51% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=zstd-2      109.34k ± 0%   126.59k ± 0%  +15.77% (p=0.002 n=6)   83.97k ± 0%  -23.21% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=snappy-2      17.64k ± 0%    24.19k ± 0%  +37.13% (p=0.002 n=6)   17.31k ± 0%   -1.86% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=zstd-2        12.04k ± 0%    15.49k ± 0%  +28.64% (p=0.002 n=6)   10.09k ± 0%  -16.16% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=snappy-2     66.35k ± 0%    82.18k ± 0%  +23.85% (p=0.002 n=6)   57.38k ± 0%  -13.52% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=zstd-2       45.38k ± 0%    54.56k ± 0%  +20.24% (p=0.002 n=6)   30.68k ± 0%  -32.38% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=snappy-2    315.9k ± 0%    408.1k ± 0%  +29.20% (p=0.002 n=6)   270.7k ± 0%  -14.31% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=zstd-2      197.3k ± 0%    234.3k ± 0%  +18.76% (p=0.002 n=6)   132.9k ± 0%  -32.61% (p=0.002 n=6)
+geomean                                              41.54k         50.70k       +22.06%                 32.77k       -21.10%
+
+                                                  │    rw2proto    │                 arrowrefs                 │                 arrowwide                 │
+                                                  │      B/op      │      B/op       vs base                   │      B/op       vs base                   │
+Encode/data=lowcard/samples=500/compr=snappy-2         38.00 ± 13%   108213.50 ± 0%  +284672.37% (p=0.002 n=6)   145391.00 ± 0%  +382507.89% (p=0.002 n=6)
+Encode/data=lowcard/samples=500/compr=zstd-2           952.5 ±  8%    109540.5 ± 1%   +11400.31% (p=0.002 n=6)    147436.5 ± 1%   +15378.90% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=snappy-2        566.5 ± 10%    364613.5 ± 0%   +64262.49% (p=0.002 n=6)    425294.0 ± 0%   +74973.96% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=zstd-2        5.100Ki ± 26%   394.375Ki ± 2%    +7632.70% (p=0.002 n=6)   423.057Ki ± 0%    +8195.07% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=snappy-2     14.59Ki ± 18%   1494.20Ki ± 0%   +10143.43% (p=0.002 n=6)   2199.11Ki ± 0%   +14975.94% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=zstd-2       254.3Ki ± 13%    1661.4Ki ± 2%     +553.35% (p=0.002 n=6)    2504.9Ki ± 3%     +885.07% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=snappy-2        125.0 ± 15%    199782.0 ± 0%  +159725.60% (p=0.002 n=6)    317128.5 ± 0%  +253602.80% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=zstd-2        2.018Ki ±  8%   199.095Ki ± 1%    +9768.03% (p=0.002 n=6)   315.421Ki ± 0%   +15533.66% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=snappy-2     2.002Ki ± 19%   687.927Ki ± 0%   +34262.78% (p=0.002 n=6)   952.062Ki ± 0%   +47456.66% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=zstd-2       101.1Ki ± 15%     796.2Ki ± 2%     +687.15% (p=0.002 n=6)    1088.7Ki ± 6%     +976.37% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=snappy-2    50.12Ki ±  9%   2822.26Ki ± 0%    +5531.48% (p=0.002 n=6)   4735.28Ki ± 1%    +9348.69% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=zstd-2      572.5Ki ± 16%    3252.8Ki ± 1%     +468.22% (p=0.002 n=6)    5272.2Ki ± 3%     +820.99% (p=0.002 n=6)
+Decode/data=lowcard/samples=500/compr=snappy-2       329.7Ki ±  0%     127.4Ki ± 0%      -61.34% (p=0.002 n=6)     126.0Ki ± 0%      -61.80% (p=0.002 n=6)
+Decode/data=lowcard/samples=500/compr=zstd-2         329.8Ki ±  0%     127.5Ki ± 0%      -61.33% (p=0.002 n=6)     126.0Ki ± 0%      -61.79% (p=0.002 n=6)
+Decode/data=lowcard/samples=2000/compr=snappy-2     1928.2Ki ±  0%     459.3Ki ± 0%      -76.18% (p=0.002 n=6)     433.8Ki ± 0%      -77.50% (p=0.002 n=6)
+Decode/data=lowcard/samples=2000/compr=zstd-2       1928.8Ki ±  0%     459.9Ki ± 0%      -76.16% (p=0.002 n=6)     434.1Ki ± 0%      -77.49% (p=0.002 n=6)
+Decode/data=lowcard/samples=10000/compr=snappy-2    11.488Mi ±  0%     2.217Mi ± 0%      -80.70% (p=0.002 n=6)     2.028Mi ± 0%      -82.35% (p=0.002 n=6)
+Decode/data=lowcard/samples=10000/compr=zstd-2      11.489Mi ±  0%     2.220Mi ± 0%      -80.68% (p=0.002 n=6)     2.031Mi ± 0%      -82.33% (p=0.002 n=6)
+Decode/data=highcard/samples=500/compr=snappy-2      453.4Ki ±  0%     232.5Ki ± 0%      -48.73% (p=0.002 n=6)     253.2Ki ± 0%      -44.16% (p=0.002 n=6)
+Decode/data=highcard/samples=500/compr=zstd-2        453.7Ki ±  0%     232.7Ki ± 0%      -48.71% (p=0.002 n=6)     253.4Ki ± 0%      -44.15% (p=0.002 n=6)
+Decode/data=highcard/samples=2000/compr=snappy-2    2451.8Ki ±  0%     895.0Ki ± 0%      -63.50% (p=0.002 n=6)     869.6Ki ± 0%      -64.53% (p=0.002 n=6)
+Decode/data=highcard/samples=2000/compr=zstd-2      2454.2Ki ±  0%     896.1Ki ± 0%      -63.49% (p=0.002 n=6)     870.7Ki ± 0%      -64.52% (p=0.002 n=6)
+Decode/data=highcard/samples=10000/compr=snappy-2   13.865Mi ±  0%     4.272Mi ± 0%      -69.19% (p=0.002 n=6)     4.023Mi ± 0%      -70.98% (p=0.002 n=6)
+Decode/data=highcard/samples=10000/compr=zstd-2     13.875Mi ±  0%     4.277Mi ± 0%      -69.17% (p=0.002 n=6)     4.027Mi ± 0%      -70.97% (p=0.002 n=6)
+geomean                                              108.6Ki           622.2Ki          +473.00%                   730.5Ki          +572.71%
+
+                                                  │    rw2proto    │               arrowrefs                │                 arrowwide                 │
+                                                  │   allocs/op    │  allocs/op    vs base                  │   allocs/op     vs base                   │
+Encode/data=lowcard/samples=500/compr=snappy-2         0.0 ±  0%       160.0 ± 0%           ? (p=0.002 n=6)      3589.0 ± 0%            ? (p=0.002 n=6)
+Encode/data=lowcard/samples=500/compr=zstd-2           0.0 ±  0%       160.0 ± 0%           ? (p=0.002 n=6)      3589.0 ± 0%            ? (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=snappy-2      6.000 ±  0%     164.000 ± 0%   +2633.33% (p=0.002 n=6)   12861.000 ± 0%  +214250.00% (p=0.002 n=6)
+Encode/data=lowcard/samples=2000/compr=zstd-2        10.50 ± 33%      164.00 ± 0%   +1461.90% (p=0.002 n=6)    12861.00 ± 0%  +122385.71% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=snappy-2     167.0 ± 17%       168.0 ± 0%           ~ (p=0.682 n=6)     62321.0 ± 0%   +37217.96% (p=0.002 n=6)
+Encode/data=lowcard/samples=10000/compr=zstd-2       308.0 ± 13%       168.0 ± 0%     -45.45% (p=0.002 n=6)     62321.0 ± 0%   +20134.09% (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=snappy-2        0.0 ±   ?       162.0 ± 0%           ? (p=0.002 n=6)      6290.0 ± 0%            ? (p=0.002 n=6)
+Encode/data=highcard/samples=500/compr=zstd-2        1.000 ±  0%     162.000 ± 0%  +16100.00% (p=0.002 n=6)    6290.000 ± 0%  +628900.00% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=snappy-2     16.00 ± 19%      166.00 ± 0%    +937.50% (p=0.002 n=6)    22547.00 ± 0%  +140818.75% (p=0.002 n=6)
+Encode/data=highcard/samples=2000/compr=zstd-2       31.00 ± 16%      166.00 ± 0%    +435.48% (p=0.002 n=6)    22546.50 ± 0%   +72630.65% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=snappy-2    429.5 ±  9%       170.0 ± 1%     -60.42% (p=0.002 n=6)    109236.0 ± 0%   +25333.29% (p=0.002 n=6)
+Encode/data=highcard/samples=10000/compr=zstd-2      781.5 ± 15%       172.0 ± 0%     -77.99% (p=0.002 n=6)    109234.0 ± 0%   +13877.48% (p=0.002 n=6)
+Decode/data=lowcard/samples=500/compr=snappy-2      1580.0 ±  0%       610.0 ± 0%     -61.39% (p=0.002 n=6)       793.0 ± 0%      -49.81% (p=0.002 n=6)
+Decode/data=lowcard/samples=500/compr=zstd-2        1580.0 ±  0%       610.0 ± 0%     -61.39% (p=0.002 n=6)       793.0 ± 0%      -49.81% (p=0.002 n=6)
+Decode/data=lowcard/samples=2000/compr=snappy-2     6.130k ±  0%      2.110k ± 0%     -65.58% (p=0.002 n=6)      2.293k ± 0%      -62.59% (p=0.002 n=6)
+Decode/data=lowcard/samples=2000/compr=zstd-2       6.134k ±  0%      2.111k ± 0%     -65.59% (p=0.002 n=6)      2.293k ± 0%      -62.62% (p=0.002 n=6)
+Decode/data=lowcard/samples=10000/compr=snappy-2    30.38k ±  0%      10.11k ± 0%     -66.72% (p=0.002 n=6)      10.29k ± 0%      -66.12% (p=0.002 n=6)
+Decode/data=lowcard/samples=10000/compr=zstd-2      30.39k ±  0%      10.11k ± 0%     -66.72% (p=0.002 n=6)      10.30k ± 0%      -66.11% (p=0.002 n=6)
+Decode/data=highcard/samples=500/compr=snappy-2     2058.0 ±  0%       610.0 ± 0%     -70.36% (p=0.002 n=6)      1021.0 ± 0%      -50.39% (p=0.002 n=6)
+Decode/data=highcard/samples=500/compr=zstd-2       2059.0 ±  0%       610.0 ± 0%     -70.37% (p=0.002 n=6)      1022.0 ± 0%      -50.36% (p=0.002 n=6)
+Decode/data=highcard/samples=2000/compr=snappy-2    7.681k ±  0%      2.110k ± 0%     -72.53% (p=0.002 n=6)      2.528k ± 0%      -67.09% (p=0.002 n=6)
+Decode/data=highcard/samples=2000/compr=zstd-2      7.686k ±  0%      2.112k ± 0%     -72.52% (p=0.002 n=6)      2.529k ± 0%      -67.10% (p=0.002 n=6)
+Decode/data=highcard/samples=10000/compr=snappy-2   36.35k ±  0%      10.11k ± 0%     -72.19% (p=0.002 n=6)      10.53k ± 0%      -71.04% (p=0.002 n=6)
+Decode/data=highcard/samples=10000/compr=zstd-2     36.36k ±  0%      10.11k ± 0%     -72.19% (p=0.002 n=6)      10.53k ± 0%      -71.03% (p=0.002 n=6)
+geomean                                                          ¹     623.3       ?                             7.294k       ?
+¹ summaries must be >0 to compute geomean
